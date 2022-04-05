@@ -14,6 +14,6 @@ jobs:
         run: echo Hello, world!
 
   Echo:
-    uses: Parts-Logistics/msc-workfows-svc/.github/workflows/oncall.yaml@main
+    uses: oussamabouzid/oncall_demo/.github/workflows/oncall.yaml@main
     with:
       username: oussama
