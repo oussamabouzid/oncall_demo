@@ -1,0 +1,19 @@
+name: Reusable Workflow user
+
+on:
+  workflow_dispatch:
+
+jobs:
+  do-it:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  Echo:
+    uses: Parts-Logistics/msc-workfows-svc/.github/workflows/oncall.yaml@main
+    with:
+      username: oussama

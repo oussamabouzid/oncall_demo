@@ -1,0 +1,25 @@
+name: Create and Publish Docker Image
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+
+jobs:
+  Echo:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Echo username
+        run: |
+          echo ${{inputs.username}}
+
+  do-something-else:
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: echo "Hello"
